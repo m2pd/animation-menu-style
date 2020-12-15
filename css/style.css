@@ -1,0 +1,95 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Monument-Regular';
+  src: url("../font/MonumentExtended-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Monument-Bold';
+  src: url("../font/MonumentExtended-Ultrabold.otf");
+}
+
+
+body{
+  box-sizing: border-box;
+  font-family: 'Monument-Regular', sans-serif;
+  text-transform: uppercase;
+  background-color: #121212;
+  overflow: hidden;
+}
+
+.project-title h1{
+  font-weight: 300;
+}
+
+.project-categ{
+  font-weight: lighter;
+}
+
+.cursor{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 80%;
+  height: 100%;
+  /* margin: -100px 0 0 -100px; */
+  background: url('../images/image-5.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-list{
+  width: 80%;
+}
+
+.project{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 12px;
+  /* padding-bottom: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 1;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 768px){
+  .project {
+    display: block;
+  }
+}
+@media (max-width: 420px){
+  .project-title h1 {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  .project-categ{
+    font-size: 14px;
+  }
+}
